@@ -1,0 +1,23 @@
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["python"]
+
+[tools]
+uv = "latest"
+ruff = "latest"
+
+[tasks.check]
+description = "Lint / check the python scripts"
+run = [
+        "ruff check",
+        "uv run pyright --warnings",
+]
+
+[tasks.format]
+description = "Format the python scripts"
+run = [
+        "ruff format",
+]

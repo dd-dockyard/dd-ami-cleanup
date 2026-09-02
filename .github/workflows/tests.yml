@@ -1,0 +1,16 @@
+name: tests
+
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: jdx/mise-action@v3
+
+      - run: mise run check
