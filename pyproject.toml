@@ -7,7 +7,7 @@ requires-python = ">=3.13.0"
 dependencies = ["boto3>=1.43.87", "botocore>=1.43.87", "rich>=14.0.0", "typer>=0.16.0"]
 
 [project.scripts]
-dd-podman-build = "dd_ami_cleanup.app:app"
+dd-ami-cleanup = "dd_ami_cleanup.app:app"
 
 [build-system]
 requires = ["hatchling"]
